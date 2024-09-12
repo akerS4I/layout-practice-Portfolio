@@ -1,11 +1,60 @@
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+:root {
+ --text-color: #1a1c20;
+ --link-color: #4a76ee;
+ --background-color: #eeeff1;
+ --font-family: "Poppins", sans-serif;
 }
 
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+html {
+ scroll-behavior: smooth;
+}
+
+body {
+ background-color: var(--background-color);
+ color: var(--text-color);
+ font-family: var(--font-family);
+}
+
+a {
+ color: var(--link-color);
+ text-decoration: none;
+}
+
+nav {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+
+ padding: 0 50px;
+
+ height: 80px;
+}
+
+nav .left a {
+ color: var(--text-color);
+ font-size: 22px;
+ font-weight: 600;
+}
+
+nav .right a {
+ color: var(--text-color);
+
+ margin: 0 10px;
+}
+
+nav .right a:last-child {
+ color: var(--background-color);
+ background-color: var(--text-color);
+ padding: 5px 15px;
+ border-radius: 5px;
+}
+
+nav .right a span{
+  margin-left: 5px;
 }
