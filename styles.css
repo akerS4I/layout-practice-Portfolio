@@ -26,6 +26,8 @@ a {
  text-decoration: none;
 }
 
+/* NAVBAR */
+
 nav {
  display: flex;
  align-items: center;
@@ -55,6 +57,113 @@ nav .right a:last-child {
  border-radius: 5px;
 }
 
-nav .right a span{
-  margin-left: 5px;
+nav .right a span {
+ margin-left: 5px;
+}
+
+/* Section 1: Hero  */
+
+.hero-section {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 50px;
+
+ padding: 0 50px;
+ margin: 50px 0 100px 0;
+}
+
+.hero-section .text {
+ flex: 5;
+}
+
+.hero-section .headshot {
+ display: flex;
+ justify-content: right;
+ flex: 2;
+}
+
+.hero-section .headshot img {
+ width: 350px;
+}
+
+.hero-section .text h2 {
+ font-size: 45px;
+}
+
+.hero-section .text .links {
+ margin-top: 25px;
+}
+
+.hero-section .text .links a {
+ display: inline-block;
+ padding: 5px 10px;
+ border: 2px solid var(--link-color);
+ border-radius: 5px;
+
+ margin-right: 10px;
+ margin-bottom: 10px;
+ transition: 0.2s ease;
+}
+
+.hero-section .text .links a:hover {
+ background-color: var(--link-color);
+ color: var(--background-color);
+}
+
+@media (max-width: 850px) {
+ /* Section 1: Hero */
+ .hero-section .text h2 {
+  font-size: 35px;
+ }
+}
+
+@media (max-width: 740px) {
+ /* Section 1: Hero */
+ .hero-section {
+  flex-direction: column-reverse;
+ }
+
+ .hero-section .headshot img {
+  width: 300px;
+ }
+}
+
+@media (max-width: 660px) {
+ /* NAVBAR */
+ nav {
+  padding: 0 20px;
+ }
+
+ nav .right a {
+  font-size: 22px;
+ }
+
+ nav .right a span {
+  display: none;
+ }
+
+ nav .right a:last-child {
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--background-color);
+ }
+
+ /* Section 1: Hero */
+ .hero-section {
+  padding: 0 20px;
+ }
+
+ .hero-section .text h2 {
+  font-size: 30px;
+ }
+}
+
+@media (max-width: 380px) {
+ nav {
+  padding: 0 5px;
+ }
+ nav .right a {
+  margin: 0 2px;
+ }
 }
