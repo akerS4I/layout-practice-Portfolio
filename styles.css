@@ -19,6 +19,8 @@ body {
  background-color: var(--background-color);
  color: var(--text-color);
  font-family: var(--font-family);
+ max-width: 1400px;
+ margin: 0 auto;
 }
 
 a {
@@ -61,7 +63,7 @@ nav .right a span {
  margin-left: 5px;
 }
 
-/* Section 1: Hero  */
+/* SECTION 1: Hero  */
 
 .hero-section {
  display: flex;
@@ -111,15 +113,105 @@ nav .right a span {
  color: var(--background-color);
 }
 
+/* SECTION 2: Skills */
+.skills-section {
+ padding: 0 50px;
+ margin-bottom: 100px;
+}
+
+.skills-section h2 {
+ text-align: center;
+ font-size: 35px;
+}
+
+.skills-section .text {
+ text-align: center;
+ margin-bottom: 100px;
+}
+
+.skills-section .cells {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 20px;
+}
+
+.skills-section .cells .cell {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+ gap: 10px;
+
+ width: 200px;
+ padding: 10px 20px;
+
+ border: 1.5px solid #d3d3d3;
+ border-radius: 5px;
+}
+
+.skills-section .cells .cell img {
+ width: 30px;
+ height: 30px;
+ object-fit: contain;
+ border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+ font-size: 18px;
+}
+
+/* SECTION 3: Testimony */
+.testimony-section {
+ padding: 0 50px;
+ margin-bottom: 100px;
+}
+
+.testimony-section h2 {
+ font-size: 35px;
+ margin-bottom: 30px;
+ text-align: center;
+}
+
+.testimony-section .group {
+ display: flex;
+ align-items: center;
+ gap: 50px;
+}
+
+.testimony-section .group .person-details {
+ text-align: center;
+ flex: 2;
+}
+
+.testimony-section .group .text {
+ flex: 8;
+}
+
+.testimony-section .group .person-details img {
+ width: 200px;
+ aspect-ratio: 1 / 1;
+ object-fit: cover;
+ border-radius: 50%;
+}
+
+.testimony-section .group .person-details p {
+ font-weight: 600;
+}
+
+.testimony-section .group .person-details p:last-child {
+ font-weight: normal;
+}
+
 @media (max-width: 850px) {
- /* Section 1: Hero */
+ /* SECTION 1: Hero */
  .hero-section .text h2 {
   font-size: 35px;
  }
 }
 
 @media (max-width: 740px) {
- /* Section 1: Hero */
+ /* SECTION 1: Hero */
  .hero-section {
   flex-direction: column-reverse;
  }
@@ -127,6 +219,72 @@ nav .right a span {
  .hero-section .headshot img {
   width: 300px;
  }
+
+ /* SECTION 3: Testimony */
+
+ .testimony-section {
+  text-align: center;
+ }
+
+ .testimony-section .group {
+  flex-direction: column;
+ }
+}
+
+/* SECTION 4: Contact */
+
+.contact-section {
+ padding: 0 50px;
+ margin-bottom: 100px;
+}
+
+.contact-section h2 {
+ font-size: 35px;
+}
+
+.contact-section .group {
+ display: flex;
+ gap: 50px;
+}
+
+.contact-section .group .text {
+ margin-top: 20px;
+ flex: 3;
+}
+
+.contact-section .group form {
+ flex: 3;
+ display: flex;
+ flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+ font-family: var(--font-family);
+
+ border: 2px solid var(--link-color);
+ background-color: transparent;
+
+ padding: 10px;
+ margin-bottom: 15px;
+
+ outline: none;
+ resize: none;
+}
+
+.contact-section .group form button {
+ font-size: 16px;
+ font-family: var(--font-family);
+ color: #fff;
+ background-color: var(--link-color);
+ border: none;
+ height: 50px;
+ cursor: pointer;
+ transition: 0.2s;
+}
+
+.contact-section .group form button:hover {
+ filter: brightness(0.9);
 }
 
 @media (max-width: 660px) {
@@ -149,13 +307,38 @@ nav .right a span {
   background-color: var(--background-color);
  }
 
- /* Section 1: Hero */
+ /* SECTION 1: Hero */
  .hero-section {
   padding: 0 20px;
  }
 
  .hero-section .text h2 {
   font-size: 30px;
+ }
+
+ /* SECTION 2: Skills */
+ .skills-section {
+  padding: 0 20px;
+ }
+
+ .skills-section .cells .cell span {
+  font-size: 16px;
+ }
+
+ /* SECTION 3: Testimony */
+
+ .testimony-section {
+  padding: 0 20px;
+ }
+
+ /* SECTION 4: Contact */
+
+ .contact-section {
+  padding: 0 20px;
+ }
+
+ .contact-section .group {
+  flex-direction: column;
  }
 }
 
@@ -167,9 +350,3 @@ nav .right a span {
   margin: 0 2px;
  }
 }
-
-/* dsfhskhfksdhfof
-asfaiofjifjdsf
-sdfhdshfidshfdsf
-sidjfldsjfldsjf
-sidjfosidjfdf */
